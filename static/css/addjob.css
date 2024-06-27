@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  background-image: url(static/jobs/images/top-view-blue-office-desk-with-computer_44289-374.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  .container {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 50px auto;
+      padding: 20px;
+      width: 500px;
+    }
+  .company-logo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: -1; 
+      width: 100px; 
+      height: auto; 
+      opacity: 0.6; 
+    }
+    h1 {
+      color: #1a1818;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      text-align: center;
+  }
+    label {
+      color: #110c0c;
+      font-size: 1.2rem;
+      font-weight: bold; 
+  }
+  
+  input[type="text"],
+  select {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      display: block;
+      font-size: 1rem;
+      padding: 8px;
+      width: 100%;
+  }
+  .submit-button {
+      background-color: rgb(42, 80, 231);
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+    }
+    *{
+      box-sizing: border-box;
+  }
+  #navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #navList li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  #navList li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  #navList li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+  }
+  nav {
+    background-color: #333;
+  }
+    

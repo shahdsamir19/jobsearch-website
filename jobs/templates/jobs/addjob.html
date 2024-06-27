@@ -1,0 +1,31 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Job</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/addjob.css' %}">
+    <!--<script src="{% static 'jobs/js/addjob.js' %}" defer></script>-->
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'admin_dashboard' %}">Admin dashboard</a></li>
+            <li><a href="{% url 'homepage' %}">Logout</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+    <h1>Add Job</h1>
+
+    <form method="post" id="jobForm">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Job</button>
+    </form>
+</body>
+</html>

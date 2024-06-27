@@ -1,0 +1,41 @@
+
+<!-- user/templates/jobs/applied_jobs.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/appliedjob.css' %}">
+    <title>Applied Jobs</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'job_details' %}">Jobs</a></li>
+            <li><a href="{% url 'FUser' %}">User dashboard</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+    <div class="content-wrapper">
+        <h1>Applied Jobs</h1>
+        <div class="applied-jobs-container">
+            {% if applications %}
+                {% for application in applications %}
+                    <div class="applied-job-item">
+                        <h2>{{ application.job.job_title }}</h2>
+                        <p><strong>Company:</strong> {{ application.job.company_name }}</p>
+                        <p><strong>Applied On:</strong> {{ application.applied_at }}</p>
+                    </div>
+                    <hr>
+                {% endfor %}
+            {% else %}
+                <p>You have not applied for any jobs yet.</p>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>

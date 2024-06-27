@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url(keyboard-coffee-smartphone-notebook-color-background-top-view_1286-776.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    
+    color: #007bff; 
+}
+.company-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: -1; 
+    width: 100px; 
+    height: auto; 
+    opacity: 0.6; 
+  }
+
+footer {
+    text-align: center;
+}
+
+
+

@@ -1,0 +1,93 @@
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    position: fixed;
+
+    height: 100%;
+    width: 100%;
+}
+
+.form form {
+    background-color: #003c43;
+    width: 25rem;
+    padding: 1rem;
+    border-radius: 1.4rem;
+    box-shadow: 3px 3px 2px #058a99;
+    /*  text-align: center;
+        vertical-align: middle;
+        */
+    color: white;
+
+
+
+}
+
+.form form h3 {
+    text-align: center;
+    text-shadow: 2px 2px 3px #058a99;
+    font-size: 2.2rem;
+    margin: 40px;
+}
+
+.form form input {
+    width: 50%;
+    margin: 0.7rem 0 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.6rem;
+    padding: 0.7rem 1.2rem;
+}
+
+.form form label {
+    font-size: 1.2rem;
+    padding-top: 0.7rem;
+    margin: 8px;
+    display: block;
+}
+
+
+
+.form form p {
+    font-size: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+
+}
+
+.form form .checkbox label,
+.form form .checkbox input {
+    display: inline;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 4;
+    margin: 0;
+    width: 25;
+    cursor: pointer;
+
+
+}
+
+.form form p a {
+    color: orange;
+    text-decoration: none;
+}
+
+.form form p a:hover {
+    color: black;
+}
+
+
+.form form .Login_btn {
+    margin: 20px 0 15px;
+    padding: 10px 0;
+    width: 100%;
+    background-color: white;
+    color: #003c43;
+    font-size: 20px;
+    border-radius: 0.6rem;
+}
+
+.form form .Login_btn:hover {
+    color: orangered;
+}

@@ -1,0 +1,94 @@
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Jobs</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/Fuser.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <script src="{% static 'jobs/js/FUser.js' %}" defer></script>
+</head>
+<body>
+<nav id="navbar">
+    <ul id="navList">
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'job_details' %}">Jobs</a></li>
+
+        <li><a href="{% url 'help' %}">Help</a></li>
+    </ul>
+</nav>
+<div class="bs">
+    <div class="page-name">
+        <main>
+            <div class="content">
+                <h1>Search Job</h1>
+            </div>
+            <form id="searchForm">
+                <div class="search-container">
+                    <select id="searchType">
+                        <option value="ALL">ALL</option>
+                        <option value="title">Job Title</option>
+                        <option value="experience">Years Of Experience</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </form>
+            <div id="searchResults"></div>
+        </main>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2024 User Dashboard. All rights reserved.</p>
+</footer>
+<img src="https://media.licdn.com/dms/image/C4D0BAQHcc-eRrRY6HQ/company-logo_200_200/0/1639411692870/job_com_logo?e=2147483647&v=beta&t=QcdXhCxWCJbp4OGQ4Nnppf_UaX9_M9jsg4xVDiSTSxU" alt="Company Logo" class="company-logo">
+</body>
+<!-- user/templates/jobs/searchjobs.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+   
+    <link rel="stylesheet" href="{% static 'jobs/css/search.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+   <script src="{% static 'jobs/js/searchjob.js' %}" defer></script>
+    
+</head>
+<body>
+ 
+    <h1>Job Search</h1>
+
+    <form id="search-form" method="get" action="{% url 'search_jobs' %}">
+        <div>
+            <input type="text" name="title" placeholder="Search by job title..." value="{{ request.GET.title }}">
+            <input type="text" name="experience" placeholder="Search by years of experience..." value="{{ request.GET.experience }}">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+
+    <h2>Search Results</h2>
+    <div id="search-results">
+        <ul>
+            {% for job in jobs %}
+                <li>
+                    <strong>{{ job.job_title }}</strong><br>
+                    Company: {{ job.company_name }}<br>
+                    Salary: {{ job.salary }}<br>
+                    Description: {{ job.description }}<br>
+                    Experience Required: {{ job.years_of_experience }} years<br>
+                    Status: {{ job.get_job_status_display }}<br>
+                </li>
+            {% empty %}
+                <li>No jobs found matching your search criteria.</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

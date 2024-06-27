@@ -1,0 +1,53 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/Fuser.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <script src="{% static 'jobs/js/FUser.js' %}" defer></script>
+</head>
+<body>
+<nav id="navbar">
+    <ul id="navList">
+        <li><a href="{% url 'homepage' %}">Home</a></li>
+        <li><a href="{% url 'help' %}">Help</a></li>
+    </ul>
+</nav>
+<div class="bs">
+    <div class="page-name">
+        <main>
+            <div class="content">
+                <h1>User Dashboard</h1>
+            </div>
+            <div class="section">
+                <a href="{% url 'job_details' %}" class="ew">
+                    <h3 class="saw">View Job List</h3>
+                </a>
+            </div>
+            <div class="section">
+                <a href="{% url 'search_jobs' %}" class="ew">
+                    <h3 class="saw">Search for a Job</h3>
+                </a>
+            </div>
+            <div class="section">
+                <a href="{% url 'applied_jobs' %}" class="ew">
+                    <h3 class="saw">View Applied Jobs</h3>
+                </a>
+            </div>
+        </main>
+    </div>
+</div>
+<!-- Footer section -->
+<footer>
+    <p>&copy; 2024 User Dashboard. All rights reserved.</p>
+</footer>
+
+<!-- Logo Section -->
+<img src="https://media.licdn.com/dms/image/C4D0BAQHcc-eRrRY6HQ/company-logo_200_200/0/1639411692870/job_com_logo?e=2147483647&v=beta&t=QcdXhCxWCJbp4OGQ4Nnppf_UaX9_M9jsg4xVDiSTSxU" alt="Company Logo" class="company-logo">
+<style>
+</body>
+</html>

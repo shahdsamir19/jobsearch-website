@@ -1,0 +1,124 @@
+/* signup.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  background-image: url("keyboard-coffee-smartphone-notebook-color-background-top-view_1286-776.avif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-size: 80%;
+  }
+}
+
+
+.container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=checkbox] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #025dbd;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: #276db8;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+
+.company-logo {
+  position:fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: -1; 
+  width: 100px; 
+  height: auto; 
+  opacity: 0.6; 
+}
+navbar {
+  background-color: #333;
+}
+
+#navList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navList li {
+  display: inline;
+  margin-right: 10px;
+}
+
+#navList li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+#navList li a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+.navigation {
+  text-align: center;
+}
+
+.navigation a {
+  display: inline-block;
+  margin: 10px;
+  padding: 8px 16px;
+  background-color: #122fd6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.navigation a:hover {
+  background-color: #0660fd;
+  
+
+}

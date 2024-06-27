@@ -1,0 +1,46 @@
+
+
+<!-- user/templates/user/login.html -->
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href=" {%static 'css/Login.css' %} ">
+    <link rel="stylesheet" href=" {%static 'css/navigation.css' %} ">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'signup' %}">Signup</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+ 
+    
+
+<div class="form">
+    <form method="post">
+
+        {% csrf_token %}
+        <h3>Login</h3>
+
+        {{form}}
+        <div class="checkbox">
+            <label for="remember me">remember me</label>
+            <input name="Remember" type="checkbox" id="rmemember me">
+
+        </div>
+        <input type="submit" class="Login_btn" id="" value="Login">
+        <p>forgot password:? <a href="Forgetting_Pass1.html">CLick Here</a> </p>
+
+    </form>
+</div>
+</body>
+</html>
+{% endblock content %}

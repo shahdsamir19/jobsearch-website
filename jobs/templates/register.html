@@ -1,0 +1,39 @@
+<!-- user/templates/user/login.html -->
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href=" {%static 'css/signup.css' %} ">
+    <link rel="stylesheet" href=" {%static 'css/navigation.css' %} ">
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'login' %}">login</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+ 
+    
+
+
+    <div class="signup">
+        <form method="post">
+            {% csrf_token %}
+            <h3>Signup</h3>
+    
+            {{form}}
+            
+            <input type="submit" class="Signup_btn" id="" value="Signup">
+        </form>
+    </div>
+    
+</body>
+</html>
+{% endblock content %}

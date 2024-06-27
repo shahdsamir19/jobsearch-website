@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Admin Dashboard</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/admindashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+    
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'add_job' %}">Add Job</a></li>
+            <li><a href="{% url 'homepage' %}">Logout</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Company Admin Dashboard</h1>
+        <div id="jobList"></div>
+        
+    </div>
+    <form method="post" id="csrfTokenForm">
+        {% csrf_token %}
+    </form>
+    <script src="{% static 'jobs/js/admindashboard.js' %}" defer></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - Job Search Website</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/help.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <a href="{% url 'help' %}"></a>
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'help' %}">help</a></li>
+        </ul>
+    </nav>
+<div class="container">
+    <h1>About Job Search Website</h1>
+    <p>Welcome to the Job Search Website, a platform designed to connect job seekers with job opportunities posted by companies.</p>
+    <h2>Rules</h2>
+    <ul>
+        <li>Users must sign up and log in to access the features of the website.</li>
+        <li>Company admins can add, edit, and delete job opportunities.</li>
+        <li>Users can search for jobs by title or years of experience, view job details, and apply for jobs.</li>
+    </ul>
+    <h2>Contact Information</h2>
+    <p>For any inquiries or assistance, please contact us:</p>
+    <ul>
+        <li>Email: info@jobsearchwebsite.com</li>
+        <li>Phone: +1 (123) 456-7890</li>
+    </ul>
+</div>
+<footer>
+    <p>&copy; 2024 Job Search Website. All rights reserved.</p>
+</footer>
+<img src="https://media.licdn.com/dms/image/C4D0BAQHcc-eRrRY6HQ/company-logo_200_200/0/1639411692870/job_com_logo?e=2147483647&v=beta&t=QcdXhCxWCJbp4OGQ4Nnppf_UaX9_M9jsg4xVDiSTSxU" alt="Company Logo" class="company-logo">
+
+</body>
+</html>

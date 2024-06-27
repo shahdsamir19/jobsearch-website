@@ -1,0 +1,74 @@
+
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Details</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/jobdetails.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'job_details' %}">Jobs</a></li>
+            <li><a href="{% url 'FUser' %}">User dashboard</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Job Details</h1>
+        <div id="jobList"></div>
+    </div>
+    <script src="{% static 'jobs/js/jobdetails.js' %}" defer></script>
+</body>
+</html> -->
+<!-- job_list.html -->
+<!-- user/templates/jobs/jobdetails.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="{% static 'jobs/css/jobdetails.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'job_details' %}">Jobs</a></li>
+            <li><a href="{% url 'FUser' %}">User dashboard</a></li>
+            <li><a href="{% url 'add_job' %}">Add job</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+    <h1>Job Listings</h1>
+    <div class="job-container">
+        <div class="no-of-job">
+                    <p>Number of jobs: {{ jobs|length }}</p>
+
+        </div>
+        {% if jobs %}
+            {% for job in jobs %}
+                <div class="job-item">
+                    <h2>{{ job.job_title }}</h2>
+                    <p><strong>Salary:</strong> {{ job.salary }}</p>
+                    <p><strong>Company:</strong> {{ job.company_name }}</p>
+                    <p><strong>Status:</strong> {{ job.get_job_status_display }}</p>
+                    <!-- <p><strong>Description:</strong> {{ job.description }}</p>
+                    <p><strong>Years of Experience:</strong> {{ job.years_of_experience }}</p>
+                    <p><strong>Created by Admin:</strong> {{ job.created_by_admin }}</p> -->
+                    <a href="{% url 'job_detail' job.id %}" class="details-button">More Details</a>
+                </div>
+                <hr>
+            {% endfor %}
+        {% else %}
+            <p>No jobs available</p>
+        {% endif %}
+    </div>
+</body>
+</html>

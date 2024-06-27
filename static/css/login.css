@@ -1,0 +1,90 @@
+/* login.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('{% static "image/top-view-blue-office-desk-with-computer_44289-374.avif" %}');
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #111;
+  }
+  
+  .container {
+    max-width: 400px;
+    height: 430px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input[type=text], input[type=password], input[type=email], input[type=checkbox] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+    width: 100%;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #0d77e9;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .company-logo {
+    position:fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: -1; 
+    width: 100px; 
+    height: auto; 
+    opacity: 0.6; 
+  }

@@ -1,0 +1,39 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/homepage.css' %}">
+   <!--<script src="{% static 'jobs/js/homepage.js' %}" defer></script>-->
+</head>
+<body> 
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'login' %}">Jobs</a></li>
+            <li><a href="{% url 'login' %}">Add Job</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Welcome to Job Search Website</h1>
+        <p>"Discover your next career move on our user-friendly platform designed for job seekers."</p>
+        <p>Explore thousands of job opportunities tailored to your skills and interests.</p>
+        <form id="loginForm">
+            <div class="navigation">
+                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'signup' %}">Sign Up</a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Job Search Website. All rights reserved.</p>
+    </footer>
+    <img src="https://media.licdn.com/dms/image/C4D0BAQHcc-eRrRY6HQ/company-logo_200_200/0/1639411692870/job_com_logo?e=2147483647&v=beta&t=QcdXhCxWCJbp4OGQ4Nnppf_UaX9_M9jsg4xVDiSTSxU" alt="Company Logo" class="company-logo">
+</body>
+</html>

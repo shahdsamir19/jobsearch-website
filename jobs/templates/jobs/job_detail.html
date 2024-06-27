@@ -1,0 +1,213 @@
+<!-- user/templates/jobs/job_detail.html -->
+<!-- user/templates/jobs/job_detail.html -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ job.job_title }} - Job Details</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'job_details' %}">Jobs</a></li>
+            <li><a href="{% url 'FUser' %}">User dashboard</a></li>
+            <li><a href="{% url 'add_job' %}">Add job</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1>{{ job.job_title }}</h1>
+        <div class="job-details">
+            <div class="detail-row">
+                <span class="detail-label">Salary:</span>
+                <span class="detail-value">{{ job.salary }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Company:</span>
+                <span class="detail-value">{{ job.company_name }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Status:</span>
+                <span class="detail-value">{{ job.get_job_status_display }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Description:</span>
+                <span class="detail-value">{{ job.description }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Years of Experience:</span>
+                <span class="detail-value">{{ job.years_of_experience }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Created by Admin:</span>
+                <span class="detail-value">{{ job.created_by_admin }}</span>
+            </div>
+        </div>
+        <a href="{% url 'job_details' %}" class="back-button">Back to Listings</a>
+    </div>
+
+    <style>
+        /* user/static/jobs/css/job_detail.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+#navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#navList li {
+    margin: 0 10px;
+}
+
+#navList li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#navList li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2em;
+}
+
+.job-details {
+    margin-bottom: 30px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.detail-label {
+    font-weight: bold;
+    color: #555;
+    flex-basis: 40%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.detail-value {
+    flex-basis: 60%;
+    color: #333;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #0d77e9;
+}
+
+    </style>
+</body>
+</html> -->
+{% load static %}
+<!-- user/templates/jobs/job_detail.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'jobs/css/navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'jobs/css/job_detail.css' %}">
+    <title>{{ job.job_title }} - Job Details</title>
+</head>
+<body>
+    <nav id="navbar">
+        <ul id="navList">
+            <li><a href="{% url 'homepage' %}">Home</a></li>
+            <li><a href="{% url 'job_details' %}">Jobs</a></li>
+            <li><a href="{% url 'FUser' %}">User dashboard</a></li>
+            <li><a href="{% url 'add_job' %}">Add job</a></li>
+            <li><a href="{% url 'help' %}">Help</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1>{{ job.job_title }}</h1>
+        <div class="job-details">
+            <div class="detail-row">
+                <span class="detail-label">Salary:</span>
+                <span class="detail-value">{{ job.salary }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Company:</span>
+                <span class="detail-value">{{ job.company_name }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Status:</span>
+                <span class="detail-value">{{ job.get_job_status_display }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Description:</span>
+                <span class="detail-value">{{ job.description }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Years of Experience:</span>
+                <span class="detail-value">{{ job.years_of_experience }}</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Created by Admin:</span>
+                <span class="detail-value">{{ job.created_by_admin }}</span>
+            </div>
+        </div>
+        {% if already_applied %}
+        <p>You have already applied for this job.</p>
+        {% else %}
+        <a href="{% url 'apply_for_job' job.id %}" class="apply-button">Apply</a>
+        {% endif %}
+        
+        <a href="{% url 'job_details' %}" class="back-button">Back to Listings</a>
+    </div>
+
+</body>
+</html>
