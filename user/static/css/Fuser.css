@@ -1,0 +1,136 @@
+/* Fuser.css */
+.company-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px; 
+    height: auto; 
+    opacity: 0.6; 
+  }
+  input[type="text"], select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #9AC8CD ;
+  margin: 0;
+  padding: 0;
+  background-image: url(top-view-blue-office-desk-with-computer_44289-374.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: #000dff;
+}
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4078d2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #9fdefb;
+  transform: scale(1.1);
+}
+#searchResults {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: rgb(226, 232, 237);
+  
+
+}
+.search-container {
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.saw {
+  max-width: 600px;
+  text-align: center;
+  font-size: x-large;
+  border-radius: 12px;
+  text-decoration: none;
+  margin: auto ;
+  margin-top: 12px;
+  padding: 18px;
+  background-color: #fdfeff ;
+  color: #1E0342;
+}
+.ew{
+  text-decoration: none;
+}
+.book-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+main{
+  background-image: url("ss.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.content p {
+  color:#e3edf8;
+  font-size: 40px;
+}
+.content table tbody td , .content table thead td {
+
+  padding: 10px;
+  border :1px solid;
+  width: 30%;
+  border-collapse: collapse;
+  color:#1E0342;
+}
+.content table thead td{
+  padding: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #feffff;
+}
+.content table tbody td{
+  background-color: #feffff;
+  font-size: 19px;
+}
+a{
+  text-decoration: none;
+  color:#1E0342;
+  font-weight: bold;
+}
+a:hover{
+  color:rgb(121, 118, 111);
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: /*#3783db*/ #d6dee8;
+  border-radius: 5px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 , h2{
+  color: #1E0342;
+  text-align: center;
+  font-size: xxx-large;
+  margin-top: 0;
+}
+p {
+  text-align: center;
+}
+form {
+  margin-bottom: 20px;
+}

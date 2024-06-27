@@ -1,0 +1,77 @@
+/* jobdetails.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url(keyboard-coffee-smartphone-notebook-color-background-top-view_1286-776.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.job-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.job-item h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.job-item p {
+    margin-bottom: 5px;
+}
+
+/*nav {
+    background-color: #333;
+}
+
+#navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navList li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#navList li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#navList li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}*/
+.company-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: -1; 
+    width: 100px; 
+    height: auto; 
+    opacity: 0.6; 
+  }

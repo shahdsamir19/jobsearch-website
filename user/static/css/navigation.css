@@ -1,0 +1,29 @@
+
+nav {
+    background-color: #333;
+}
+
+#navList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navList li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#navList li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+#navList li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+.navigation {
+    text-align: center;
+  }
